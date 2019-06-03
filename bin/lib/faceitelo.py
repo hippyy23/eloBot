@@ -16,11 +16,13 @@ __email__ = "adrinarol@gmail.com"
 
 def get_elo():
     while True:
-        url = 'https://faceitstats.com/player,s4tanax'
+        url = 'https://faceitstats.com/steam,76561198894299878'
         response = requests.get(url).text
         soup = BeautifulSoup(response, "html.parser")
         string = str(soup.prettify().encode("utf-8"))
-        elo = string[13518: 13522]
+        string = string.replace(" ", "")
+        eloIndex = string.find("ELOis")
+        elo = string[eloIndex + 17 : eloIndex + 21]
         lib.cfg.elolist.clear()
         lib.cfg.elolist.append(elo)
         sleep(300)

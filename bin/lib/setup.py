@@ -8,7 +8,7 @@ __credits__ = ["Munteanu Adrian"]
 __version__ = "0.1"
 __email__ = "adrinarol@gmail.com"
 
-boold = True
+boold = False
 
 
 def check_lib(module):
