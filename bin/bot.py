@@ -41,7 +41,7 @@ def main():
 
             if message.strip() == "!elo":
                 lib.utils.chat(s, "s4tanax's current elo: " +
-                               lib.cfg.elolist[0])
+                               lib.cfg.elo)
         #sleep(1)
 
 
