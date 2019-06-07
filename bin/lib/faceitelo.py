@@ -25,6 +25,5 @@ def get_elo():
         string = re.sub("<.*?>", "", string)
         eloIndex = string.find("ELOis")
         elo = string[eloIndex + 9 : eloIndex + 13]
-        lib.cfg.elolist.clear()
-        lib.cfg.elolist.append(elo)
+        lib.cfg.elo = elo
         sleep(300)

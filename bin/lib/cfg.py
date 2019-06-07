@@ -16,4 +16,4 @@ CHANN = "s4tanax"
 #RATE = (20/30) # SPEED CHAT 
 
 oplist = {}
-elolist = []
+elo = ""
