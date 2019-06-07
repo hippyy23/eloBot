@@ -20,9 +20,11 @@ def get_elo():
         response = requests.get(url).text
         soup = BeautifulSoup(response, "html.parser")
         string = str(soup.prettify().encode("utf-8"))
+        # string = str(re.sub(r"\n", "", string)) work in progress
         string = string.replace(" ", "")
+        string = re.sub("<.*?>", "", string)
         eloIndex = string.find("ELOis")
-        elo = string[eloIndex + 17 : eloIndex + 21]
+        elo = string[eloIndex + 9 : eloIndex + 13]
         lib.cfg.elolist.clear()
         lib.cfg.elolist.append(elo)
         sleep(300)
