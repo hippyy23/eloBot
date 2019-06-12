@@ -20,7 +20,7 @@ def get_elo():
         soup = BeautifulSoup(response.content, "html.parser")
         for tag in soup.find_all("string"):
             if (re.match("^[0-9]+$", tag.text)):
-				elo = tag.text
-				break
+		elo = tag.text
+		break
         lib.cfg.elo = elo
         sleep(300)
