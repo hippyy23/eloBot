@@ -18,8 +18,8 @@ def get_elo():
         url = 'https://faceitstats.com/steam,76561198894299878'
         response = requests.get(url)
         soup = BeautifulSoup(response.content, "html.parser")
-        for tag in soup.find_all("string"):
+        for tag in soup.find_all("strong"):
             if (re.match("^[0-9]+$", tag.text)):
-		lib.cfg.elo = tag.text
-		break
+                lib.cfg.elo = tag.text
+                break
         sleep(300)
