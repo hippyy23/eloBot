@@ -19,7 +19,7 @@ def chat(sock, msg):
 def thread_fill_op_list():
     while True:
         try:
-            url = "http://tmi.twitch.tv/group/user/s4tanax/chatters"
+            url = "http://tmi.twitch.tv/group/user/INSERT NAME CHANNEL/chatters"
             req = urllib.Request(url, header={"accept": "*/*"})
             response = urllib.urlopen(req).read()
             if response.find("502 Bad Gateway") == -1:

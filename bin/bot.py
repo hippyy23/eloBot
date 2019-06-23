@@ -40,7 +40,7 @@ def main():
             print(response)
 
             if message.strip() == "!elo":
-                lib.utils.chat(s, "s4tanax's current elo: " +
+                lib.utils.chat(s, "INSERT BOT MESSAGE: " +
                                lib.cfg.elo)
         #sleep(1)
 

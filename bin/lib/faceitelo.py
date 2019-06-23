@@ -15,7 +15,7 @@ __email__ = "adrinarol@gmail.com"
 
 def get_elo():
     while True:
-        url = 'https://faceitstats.com/steam,76561198894299878'
+        url = 'INSERT YOUR URL FROM FACEITSTATS'
         response = requests.get(url)
         soup = BeautifulSoup(response.content, "html.parser")
         for tag in soup.find_all("strong"):
