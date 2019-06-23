@@ -1,4 +1,4 @@
-# ELO BOT FOR ARCADIE - 2019
+# ELO BOT TWITCH - 2019
 
 Elo bot uses https://faceitstats.com/ site to collect data about elo.
 
