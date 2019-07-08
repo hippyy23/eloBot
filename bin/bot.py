@@ -1,3 +1,4 @@
+import lib.interface
 import lib.setup
 import lib.utils
 import lib.cfg

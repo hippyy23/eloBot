@@ -8,9 +8,10 @@ __email__ = "adrinarol@gmail.com"
 
 HOST = "irc.twitch.tv"
 PORT = 6667
-NICK = "NAME OF THE BOT ACCOUNT"
-PASS = "OAUTH CODE OF YOUR BOT ACCOUNT"
-CHANN = "CHANNEL NAME"
+NICK = "faceitelobot"
+PASS = "oauth:n487xxw57fryhfl9u24ewgn1cjq01g"
+CHANN = ""
 
 oplist = {}
 elo = ""
+faceitLogin = ""
