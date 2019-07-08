@@ -41,7 +41,7 @@ def main():
             print(response)
 
             if message.strip() == "!elo":
-                lib.utils.chat(s, "INSERT BOT MESSAGE: " +
+                lib.utils.chat(s, "faceit elo is: " +
                                lib.cfg.elo)
         #sleep(1)
 

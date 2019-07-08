@@ -14,11 +14,11 @@ def quit():
 
 
 def login():
-    lib.cfg.NAME = entryLogin.get()
+    lib.cfg.faceitLogin = entryLogin.get()
 
 
 def channel():
-    lib.cfg.CHANNEL = entryChannel.get()
+    lib.cfg.CHANN = entryChannel.get()
 
 
 startButton = Button(box, text="START", command=quit)
