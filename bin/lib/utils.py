@@ -2,6 +2,7 @@ import lib.cfg
 import urllib, json
 import time, threading
 from time import sleep
+import os
 
 
 __author__ = "Munteanu Adrian"

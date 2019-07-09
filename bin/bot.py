@@ -19,6 +19,10 @@ __email__ = "adrinarol@gmail.com"
 
 
 def main():
+    if not lib.cfg.CHANN:
+        exit()
+    if not lib.cfg.faceitLogin:
+        exit()
     s = socket.socket()
     s.connect((lib.cfg.HOST, lib.cfg.PORT))
     s.send("PASS {}\r\n".format(lib.cfg.PASS).encode("utf-8"))
@@ -38,7 +42,6 @@ def main():
         else:
             username = re.search(r"\w+", response).group(0)
             message = CHAT_MSG.sub("", response)
-            print(response)
 
             if message.strip() == "!elo":
                 lib.utils.chat(s, "faceit elo is: " +

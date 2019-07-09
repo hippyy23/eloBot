@@ -1,12 +1,13 @@
 from tkinter import *
-import lib.cfg
+#import lib.cfg
 
 box = Tk()
-box.geometry("250x130")
+box.geometry("370x220")
 box.resizable(False, False)
 
 faceitLogin = ""
 channelName = ""
+status = BooleanVar()
 
 
 def quit():
@@ -21,26 +22,37 @@ def channel():
     lib.cfg.CHANN = entryChannel.get()
 
 
-startButton = Button(box, text="START", command=quit)
-startButton.place(x=100, y=90)
+def onstartup():
+    pass
 
+
+###############################################################
+saveButton = Button(box, text="SAVE", command=quit)
+saveButton.place(x=180, y=200)
+###############################################################
+onstartupARadiobutton = Radiobutton(box, text="on startup ACTIVATE", command=onstartup, value=True, variable=status).place(x=50, y=100)
+onstartupFRadiobutton = Radiobutton(box, text="on startup DISACTIVATE", command=onstartup, value=False, variable=status).place(x=50, y=120)
+###############################################################
 labelLogin = Label(box, text="INSERT YOUR FACEIT LOGIN")
 labelLogin.pack()
-
+labelLogin.place(x=135, y=5)
+###############################################################
 entryLogin = Entry(box)
 entryLogin.pack()
-
+entryLogin.place(x=115, y=25)
+###############################################################
 labelChannel = Label(box, text="INSERT YOUR CHANNEL NAME")
-entryChannel = Entry(box)
-
 labelChannel.pack()
+labelChannel.place(x=125, y=55)
+###############################################################
+entryChannel = Entry(box)
 entryChannel.pack()
-
-checkButtonLogin = Button(box, text="check", command=login)
-checkButtonLogin.place(x=200, y=17)
-
-checkButtonChannel = Button(box, text="check", command=channel)
-checkButtonChannel.place(x=200, y=57)
-
+entryChannel.place(x=115, y=75)
+###############################################################
+insertButtonLogin = Button(box, text="insert", command=login)
+insertButtonLogin.place(x=310, y=25)
+###############################################################
+insertButtonChannel = Button(box, text="insert", command=channel)
+insertButtonChannel.place(x=310, y=75)
 
 box.mainloop()
