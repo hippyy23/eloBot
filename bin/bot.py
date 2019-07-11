@@ -1,12 +1,13 @@
-import lib.interface
-import lib.setup
+#import lib.createshortcut
+import lib.faceitelo
+import lib.gatherdata
+#import lib.setup
 import lib.utils
 import lib.cfg
 import socket
 import re
 import time
 import threading
-import lib.faceitelo
 from time import sleep
 
 
@@ -42,7 +43,6 @@ def main():
         else:
             username = re.search(r"\w+", response).group(0)
             message = CHAT_MSG.sub("", response)
-
             if message.strip() == "!elo":
                 lib.utils.chat(s, "faceit elo is: " +
                                lib.cfg.elo)

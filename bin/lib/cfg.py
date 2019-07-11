@@ -14,5 +14,5 @@ CHANN = ""
 
 oplist = {}
 elo = ""
-faceitLogin = ""
+faceitLogin = "" 
 
