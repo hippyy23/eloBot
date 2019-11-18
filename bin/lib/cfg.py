@@ -14,5 +14,6 @@ CHANN = ""
 
 oplist = {}
 elo = ""
-faceitLogin = "" 
+faceitLogin = ""
+onstartup = False
 

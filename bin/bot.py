@@ -1,6 +1,7 @@
 #import lib.createshortcut
 import lib.faceitelo
-import lib.gatherdata
+import lib.interface
+#import lib.gatherdata
 #import lib.setup
 import lib.utils
 import lib.cfg
